@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
+    "clean": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
@@ -20,9 +21,12 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@grpc/proto-loader": "^0.5.3",
     "@nestjs/common": "^6.7.2",
     "@nestjs/core": "^6.7.2",
+    "@nestjs/microservices": "^6.10.14",
     "@nestjs/platform-express": "^6.7.2",
+    "grpc": "^1.24.2",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
     "rxjs": "^6.5.3"
